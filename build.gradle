@@ -1,0 +1,21 @@
+plugins {
+    id 'scala'
+}
+
+group 'eq2'
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.12.8'
+    testCompile 'org.scalatest:scalatest_2.12:3.0.5'
+    testCompile 'junit:junit:4.12'
+    testRuntime 'org.scala-lang.modules:scala-xml_2.12:1.1.0'
+}
+
+repositories {
+    jcenter()
+}
+
+tasks.withType(ScalaCompile) {
+    sourceCompatibility = "1.8"
+    targetCompatibility = "1.8"
+}
